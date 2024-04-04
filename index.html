@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frase para Mi Novia</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f0f0f0;
+        overflow: hidden;
+    }
+
+    #mensaje {
+        font-size: 24px;
+        color: #333;
+        opacity: 0;
+        animation: aparecer 2s ease forwards, mover 5s ease infinite;
+        position: absolute;
+    }
+
+    @keyframes aparecer {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes mover {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+
+    #corazones {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 150px;
+        pointer-events: none;
+        z-index: 1;
+        opacity: 0;
+        animation: aparecer 2s ease forwards, girar 5s linear infinite;
+    }
+
+    @keyframes girar {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+    }
+</style>
+</head>
+<body>
+<div id="mensaje">Eres mi luz en la oscuridad, mi inspiración y mi alegría. Te amo.</div>
+<img id="corazones" src="https://tenor.com/view/love-gif-25595693" alt="Corazones">
+
+<div  id="corazones" class="tenor-gif-embed" data-postid="25595693" data-share-method="host" data-aspect-ratio="1.21212" data-width="100%"><a href="https://tenor.com/view/love-gif-25595693">Love Sticker</a>from <a href="https://tenor.com/search/love-stickers">Love Stickers</a></div> <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+<script>
+    // JavaScript para mostrar el mensaje y los corazones después de un retraso
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(function() {
+            document.getElementById('mensaje').style.opacity = '1';
+            document.getElementById('corazones').style.opacity = '1';
+        }, 1000); // 1000 milisegundos = 1 segundo
+    });
+</script>
+</body>
+</html>
+
